@@ -1,0 +1,76 @@
+body {
+  margin: 40px 70px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h4 {
+  display: inline;
+  padding: 20px;
+  padding-left: 0;
+  color: rgb(1, 111, 255);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+h4:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+form {
+  padding: 20px 0;
+}
+
+h1 {
+  color: #5a6275;
+}
+
+p {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #5a6275;
+  font-size: 15px;
+}
+
+.border-body {
+  padding: 20px 11px 0px 11px;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.enter-city-form {
+  width: 60%;
+  padding: 5px 5px;
+}
+
+.current-button {
+  margin-top: -58px;
+  float: right;
+  margin-left: 510px;
+  margin-right: 25px;
+}
+
+.weather-data {
+  padding: 0px 12px 0px 44px;
+}
+
+.row {
+  color: #5a6275;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.day {
+  padding: 10px 0px 10px 11px;
+}
+
+.weather-icon {
+  font-size: 25px;
+  padding: 10px 0px 10px 11px;
+}
+
+.bold {
+  font-weight: 600;
+  padding: 10px 0px 10px 6px;
+}
