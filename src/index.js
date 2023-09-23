@@ -28,27 +28,24 @@ dayTime.innerHTML = `${day}, ${hours}:${minutes}`;
 //
 
 function showMyCurrentData(response) {
-  let homeTemperature = Math.round(response.data.main.temp);
-  let cityName = response.data.name;
-  let windspeed = response.data.wind.speed;
-  let humidity = response.data.main.humidity;
-  let feelsLike = Math.round(response.data.main.feels_like);
-  let skyDescription = response.data.weather[0].description;
-
   let temperature = document.querySelector("#temperature-heading");
-  temperature.innerHTML = `${homeTemperature}°C`;
+  temperature.innerHTML = `${Math.round(response.data.main.temp)}°C`;
 
   let city = document.querySelector("#city-name");
-  city.innerHTML = `${cityName}`;
+  city.innerHTML = `${response.data.name}`;
 
   let windData = document.querySelector("#wind-speed");
-  windData.innerHTML = `Windspeed: ${windspeed}km/h`;
+  windData.innerHTML = `Windspeed: ${response.data.wind.speed}km/h`;
 
   let humidityData = document.querySelector("#humidity");
-  humidityData.innerHTML = `Humidity: ${humidity}%`;
+  humidityData.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   let feelsLikeData = document.querySelector("#feels-like");
-  feelsLikeData.innerHTML = `Feels like: ${feelsLike}°C`;
+  feelsLikeData.innerHTML = `Feels like: ${Math.round(
+    response.data.main.feels_like
+  )}°C`;
+
+  let skyDescription = response.data.weather[0].description;
 
   let skyData = document.querySelector("#sky-description");
   skyData.innerHTML = `${capitaliseSkyDescription(skyDescription)}`;
@@ -102,3 +99,5 @@ function getCurrentPosition() {
 
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentPosition);
+
+showCityName("Bergen");
